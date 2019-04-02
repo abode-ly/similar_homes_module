@@ -4,7 +4,7 @@ const db = require('./db/index.js');
 const Home = require('./db/Home.js');
 
 const app = express();
-const port = 3004;
+const port = process.env.PORT || 3004;
 
 
 app.use(express.static(path.join(__dirname, '../client/dist')));

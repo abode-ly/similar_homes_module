@@ -1,0 +1,18 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:8.15.1
+      - image: circleci/mysql:5.7
+        environment: 
+          MYSQL_DB: 'FEC'
+          MYSQL_RANDOM_ROOT_PASSWORD: yes
+    
+    steps:
+      - checkout
+      - run: npm install 
+      - run: npm run build
+      - run: npm start
+      - run: npm db:setup 
+      - run: npm test

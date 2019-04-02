@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const key = require('../../config');
+const key = process.env.MYSQL_ROOT_PW || require('../../config');
 
 const db = new Sequelize('FEC', 'root', key, {
   host: 'localhost',
@@ -9,7 +9,7 @@ const db = new Sequelize('FEC', 'root', key, {
 db
   .authenticate()
   .then(() => console.log('Connection has been established successfully.'))
-  .catch(err =>  console.error('Unable to connect to database: ', err));
+  .catch(err => console.error('Unable to connect to database: ', err));
 
 
 module.exports = db;

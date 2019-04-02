@@ -1,0 +1,9 @@
+node_modules
+client/dist/app.js
+config.js
+.eslintrc.json
+.babelrc
+.vscode
+.DS_Store
+webpack.config.js
+

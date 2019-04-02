@@ -1,0 +1,44 @@
+{
+  "name": "similar_homes_module",
+  "version": "1.0.0",
+  "description": "Photo carousel component displaying 12 similar/nearby homes with rating and price info",
+  "main": "index.jsx",
+  "author": "Julian Venci",
+  "license": "M.I.T.",
+  "engines": {
+    "node": ">=6.13.0"
+  },
+  "scripts": {
+    "start": "nodemon ./server/index.js",
+    "build": "webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:setup": "node server/db/seed.js"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-hot-loader": "^4.3.11",
+    "sequelize": "^5.2.6",
+    "mysql2": "^1.6.5",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "faker": "^4.1.0",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.8"
+  }
+}

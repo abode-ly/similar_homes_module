@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const key = process.env.MYSQL_RANDOM_ROOT_PW || require('../../config');
+const key = process.env.MYSQL_ROOT_PW || require('../../config');
 
 const db = new Sequelize('FEC', 'root', key, {
   host: 'localhost',

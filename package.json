@@ -11,7 +11,7 @@
   "scripts": {
     "start": "nodemon ./server/index.js",
     "build": "webpack",
-    "build:watch" : "webpack --watch",
+    "build:watch": "webpack --watch",
     "test": "jest",
     "db:setup": "node server/db/seed.js"
   },
@@ -27,13 +27,14 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "sequelize": "^5.2.8",
-    "nodemon":"^1.18.10"
+    "nodemon": "^1.18.10"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
     "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
     "babel-jest": "^24.6.0",
     "babel-loader": "^8.0.5",
     "css-loader": "^1.0.1",

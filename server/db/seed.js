@@ -128,5 +128,4 @@ const insertSampleData = () => {
 db.drop();
 
 db.sync()
-  .then(() => insertSampleData())
-  .then(() => process.end());
+  .then(() => insertSampleData());

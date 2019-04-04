@@ -4,9 +4,10 @@ jobs:
     docker:
       - image: circleci/node:8.15.1
       - image: circleci/mysql:5.7
-        environment: 
+        environment:
+          MYSQL_USER: 'root' 
           MYSQL_DB: 'FEC'
-          MYSQL_RANDOM_PASSWORD: yes
+          MYSQL_ROOT_PASSWORD: 'AbodelYsF113'
     
     steps:
       - checkout

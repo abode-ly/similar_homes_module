@@ -6,7 +6,7 @@ jobs:
       - image: circleci/mysql:5.7
         environment:
           MYSQL_USER: 'root' 
-          MYSQL_DB: 'FEC'
+          MYSQL_DATABASE: 'FEC'
           MYSQL_ROOT_PASSWORD: 'AbodelYsF113'
     
     steps:

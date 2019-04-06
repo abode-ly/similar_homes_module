@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Axios from 'axios';
 import Homes from './Homes';
 
-
 class App extends Component {
   constructor() {
     super();

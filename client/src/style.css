@@ -1,0 +1,45 @@
+.homes {
+  display: flex;
+  flex-direction: row;
+}
+
+.locationText {
+  font-size: 70px;
+}
+
+.homePhoto {
+  display: flex;
+  /* margin: 10px  */
+}
+
+.home {
+  margin: 10px;
+}
+
+.allocText {
+  color: rgb(155, 49, 67);
+  font-family: sans-serif;
+  font-weight: 550;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.descText {
+  margin-top: 4px;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: bolder;
+  color: #484848
+}
+
+.priceText {
+  margin-top: 2px;
+  font-weight: lighter;
+  font-family: sans-serif;
+  color: #484848
+}
+
+.title {
+  font-family: sans-serif;
+  color: #484848;
+}

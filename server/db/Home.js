@@ -9,8 +9,10 @@ const Home = db.define('Home', {
     allowNull: false,
     primaryKey: true,
   },
+  propertyAvail: Sequelize.STRING,
   locationName: Sequelize.STRING,
   photoUrl: Sequelize.STRING,
+  price: Sequelize.INTEGER,
   rating: Sequelize.INTEGER,
 });
 

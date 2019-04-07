@@ -103,8 +103,8 @@ const homePhotos = [
 ];
 
 const randomRating = () => {
-  const rating = [0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0];
-  return rating[Math.floor(Math.random() * 10)];
+  const rating = [2, 2.5, 3, 3.5, 4, 4.5, 5];
+  return rating[Math.floor(Math.random() * 6)];
 };
 
 const randomType = () => {
@@ -114,7 +114,10 @@ const randomType = () => {
 
 const randomDescriptor = () => {
   const homeDescriptor = ['Studio', 'Loft', 'Apartment', 'House', 'Home', 'Condo', 'Cabin', 'Sweet', 'Duplex', 'Town-Home', 'Villa', 'Vacation-House', 'Yurt', 'Bungaloo', 'Chalet', 'Penthouse', 'Terrace', 'Cottage'];
-  return `${faker.company.bsAdjective()} ${homeDescriptor[Math.floor(Math.random() * 17)]} in ${faker.address.city()}`;
+  let buzzWord = faker.company.bsAdjective().split('')
+  buzzWord[0] = buzzWord[0].toUpperCase();
+  buzzWord = buzzWord.join('');
+  return `${buzzWord} ${homeDescriptor[Math.floor(Math.random() * 17)]} in ${faker.address.city()}`;
 };
 
 const createSampleHomes = (arr) => {
@@ -123,8 +126,9 @@ const createSampleHomes = (arr) => {
       propertyAvail: randomType(),
       locationName: randomDescriptor(),
       photoUrl: urlPrefix + home,
-      price: `${Math.floor(Math.random() * (1500 - 75)) + 75}`,
+      price: Math.floor(Math.random() * (1500 - 75)) + 75,
       rating: randomRating(),
+      reviewCount: Math.floor(Math.random() * (1000 - 25)) + 25,
     };
     return homeData;
   });

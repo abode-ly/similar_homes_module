@@ -1,6 +1,12 @@
 .homes {
   display: flex;
+  width: 1032px;
+  height: 338px;
   flex-direction: row;
+  margin: auto;
+  /* flex-flow: column-wrap;
+  overflow: hidden; */
+  cursor: pointer;
 }
 
 .locationText {
@@ -9,6 +15,9 @@
 
 .homePhoto {
   display: flex;
+  height: 222.219px;
+  width: 333.328px;
+
   /* margin: 10px  */
 }
 
@@ -43,13 +52,46 @@
 .stars {
   margin-top: 2px;
   height: 10px;
-  width: 10px;
+  width: 100px;
   fill: #006c70;
   display: flex;
-  /* box-sizing: border-box; */
+}
+
+.totalReviews {
+  font-family: sans-serif;
+  color: #484848;
+  font-size: smaller;
+  display: flex;
+  margin-top: 4px;
+  margin-right: 20px;
 }
 
 .title {
   font-family: sans-serif;
   color: #484848;
+  width: 1032px;
+  margin: auto;
 }
+
+.nxt-container {
+  display: flex;
+  align-self: flex-end;
+  width: 24px;
+  height: 338px;
+  align-items: center;
+  font-size: 16px;
+} 
+
+.nextButton {
+  display: flex;
+  font-size: 20px;
+  background-color: white;
+  margin-bottom: 80px;
+  border-style: none;
+  color: rgb(118, 118, 118)
+}
+
+
+
+
+

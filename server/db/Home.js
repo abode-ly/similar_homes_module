@@ -14,6 +14,7 @@ const Home = db.define('Home', {
   photoUrl: Sequelize.STRING,
   price: Sequelize.INTEGER,
   rating: Sequelize.INTEGER,
+  reviewCount: Sequelize.INTEGER,
 });
 
 module.exports = Home;

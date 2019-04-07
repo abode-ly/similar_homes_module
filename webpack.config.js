@@ -13,7 +13,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader?modules=true&camelCase=true'],
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },

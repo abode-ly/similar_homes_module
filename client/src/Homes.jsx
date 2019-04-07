@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './style.css';
+import Stars from './Stars';
 
 const Homes = (props) => {
   const { data } = props;
@@ -10,7 +11,7 @@ const Homes = (props) => {
         <div className="allocText">{home.propertyAvail}</div>
         <div className="descText">{home.locationName}</div>
         <div className="priceText">${home.price} per night</div>
-        <div>{home.rating} Stars</div>
+        <div className="stars"> <Stars rating={home.rating} /> </div>
       </div>
     );
   });

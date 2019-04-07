@@ -36,7 +36,17 @@
   margin-top: 2px;
   font-weight: lighter;
   font-family: sans-serif;
+  font-size: smaller;
   color: #484848
+}
+
+.stars {
+  margin-top: 2px;
+  height: 10px;
+  width: 10px;
+  fill: #006c70;
+  display: flex;
+  /* box-sizing: border-box; */
 }
 
 .title {

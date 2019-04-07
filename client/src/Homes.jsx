@@ -3,7 +3,7 @@ import './style.css';
 import Stars from './Stars';
 
 const Homes = (props) => {
-  const { data } = props;
+  const {handleNext, data, prev, next } = props;
   const listing = data.map((home) => {
     return (
       <div className="home">
@@ -22,17 +22,36 @@ const Homes = (props) => {
       </div>
     );
   });
-  return (
-    <div>
-      <h2 className="title"> More Homes You May Like</h2>
-      <div className="homes">
-        {listing}
-        <div className="nxt-container">
-          <button type="button" className="nextButton"> > </button>
+
+  if (next.length > 0 && prev.length === 0) {
+    console.log(prev.length)
+    return (
+      <div>
+        <h2 className="title"> More Homes You May Like</h2>
+        <div className="homes">
+          {listing}
+          <div className="nxt-container">
+            <button type="button" className="nextButton" onClick={() => handleNext()}> > </button>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  } else if (next.length > 0 && prev.length < 9) {
+      return (
+        <div>
+          <h2 className="title"> More Homes You May Like</h2>
+          <div className="prev-container">
+            <button type="button" className="prevButton" value="<" />
+          </div>
+          <div className="homes">
+            {homes}
+          </div>
+          <div className="nxt-container">
+            <button type="button" className="nextButton" onClick={() => handleNext()}> > </button>
+          </div>
+        </div>
+     )
+  }
 };
 
 export default Homes;

@@ -91,6 +91,15 @@
   color: rgb(118, 118, 118)
 }
 
+.prevButton {
+  display: flex;
+  font-size: 20px;
+  background-color: white;
+  margin-bottom: 80px;
+  border-style: none;
+  color: rgb(118, 118, 118)
+}
+
 
 
 

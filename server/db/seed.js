@@ -102,17 +102,33 @@ const homePhotos = [
   'Singapore/photo-1552406712-1ff867fb0b6e.jpeg',
 ];
 
-const randomNumber = () => {
-  const numbers = [0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0];
-  return numbers[Math.floor(Math.random() * 10)];
+const randomRating = () => {
+  const rating = [2, 2.5, 3, 3.5, 4, 4.5, 5];
+  return rating[Math.ceil(Math.random() * 6)];
+};
+
+const randomType = () => {
+  const homeType = ['Entire place', 'Private room', 'Hotel Room', 'Shared Room'];
+  return `${homeType[Math.floor(Math.random() * 3)]} • ${faker.address.city()}`;
+};
+
+const randomDescriptor = () => {
+  const homeDescriptor = ['Studio', 'Loft', 'Apartment', 'House', 'Home', 'Condo', 'Cabin', 'Sweet', 'Duplex', 'Town-Home', 'Villa', 'Vacation-House', 'Yurt', 'Bungaloo', 'Chalet', 'Penthouse', 'Terrace', 'Cottage'];
+  let buzzWord = faker.company.bsAdjective().split('')
+  buzzWord[0] = buzzWord[0].toUpperCase();
+  buzzWord = buzzWord.join('');
+  return `${buzzWord} ${homeDescriptor[Math.floor(Math.random() * 17)]} in ${faker.address.city()}`;
 };
 
 const createSampleHomes = (arr) => {
   const sampleData = arr.map((home) => {
     const homeData = {
-      locationName: faker.address.city(),
+      propertyAvail: randomType(),
+      locationName: randomDescriptor(),
       photoUrl: urlPrefix + home,
-      rating: randomNumber(),
+      price: Math.floor(Math.random() * (1500 - 75)) + 75,
+      rating: randomRating(),
+      reviewCount: Math.floor(Math.random() * (1000 - 25)) + 25,
     };
     return homeData;
   });

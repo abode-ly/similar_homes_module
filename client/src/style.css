@@ -1,0 +1,89 @@
+.homes {
+  display: flex;
+  width: 1032px;
+  height: 338px;
+  flex-direction: row;
+  margin: auto;
+  cursor: pointer;
+}
+
+.locationText {
+  font-size: 70px;
+}
+
+.homePhoto {
+  display: flex;
+  height: 222.219px;
+  width: 333.328px;
+}
+
+.allocText {
+  color: rgb(155, 49, 67);
+  font-family: sans-serif;
+  font-weight: 550;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.descText {
+  margin-top: 4px;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: bolder;
+  color: #484848
+}
+
+.priceText {
+  margin-top: 2px;
+  font-weight: lighter;
+  font-family: sans-serif;
+  font-size: smaller;
+  color: #484848
+}
+
+.stars {
+  margin-top: 2px;
+  height: 10px;
+  width: 100px;
+  fill: #006c70;
+  display: flex;
+}
+
+.totalReviews {
+  font-family: sans-serif;
+  color: #484848;
+  font-size: smaller;
+  display: flex;
+  margin-top: 4px;
+  margin-right: 20px;
+}
+
+.title {
+  font-family: sans-serif;
+  color: #484848;
+  width: 1032px;
+  margin: auto;
+}
+
+.nxt-container {
+  display: flex;
+  align-self: flex-end;
+  width: 24px;
+  height: 338px;
+  align-items: center;
+  font-size: 16px;
+} 
+
+.nextButton {
+  display: flex;
+  font-size: 20px;
+  background-color: white;
+  margin-bottom: 80px;
+  border-style: none;
+  color: rgb(118, 118, 118)
+}
+
+
+
+
+

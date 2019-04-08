@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/homes', (req, res) => {
-  Home.findAll({})
+  Home.findAll({ limit: 12 })
     .then(data => res.send(data))
     .catch(err => res.status(404).end(err));
 });

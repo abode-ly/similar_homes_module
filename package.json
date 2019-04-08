@@ -13,7 +13,8 @@
     "build": "webpack",
     "build:watch": "webpack --watch",
     "test": "jest",
-    "db:setup": "node server/db/seed.js"
+    "test:watch": "jest --watch --colors",
+    "seed": "node server/db/seed.js"
   },
   "jest": {
     "setupFilesAfterEnv": [
@@ -26,6 +27,9 @@
     },
     "testPathIgnorePatterns": [
       "node_modules"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
     ]
   },
   "dependencies": {
@@ -49,10 +53,12 @@
     "css-loader": "^1.0.1",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
+    "enzyme-to-json": "^3.3.5",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git",
     "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^22.4.1",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
     "faker": "^4.1.0",

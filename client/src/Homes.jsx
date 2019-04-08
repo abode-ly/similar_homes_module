@@ -2,27 +2,23 @@ import React from 'react';
 import './style.css';
 import Stars from './Stars';
 
-const Homes = (props) => {
-  const { handleNext, data, prev, next, handlePrev } = props;
-  const listing = data.map((home) => {
-    return (
-      <div className="home">
-        <img className="homePhoto" src={home.photoUrl} alt="" />
-        <div className="allocText">{home.propertyAvail}</div>
-        <div className="descText">{home.locationName}</div>
-        <div className="priceText">
-          ${home.price} per night
-        </div>
-        <div className="stars">
-          <Stars rating={home.rating} />
-          <span className="totalReviews">
-            {home.reviewCount}
-          </span>
-        </div>
+const Homes = ({ handleNext, data, prev, next, handlePrev }) => {
+  const listing = data.map(home => (
+    <div className="home">
+      <img className="homePhoto" src={home.photoUrl} alt="" />
+      <div className="allocText">{home.propertyAvail}</div>
+      <div className="descText">{home.locationName}</div>
+      <div className="priceText">
+        ${home.price} per night
       </div>
-    );
-  });
-
+      <div className="stars">
+        <Stars rating={home.rating} />
+        <span className="totalReviews">
+          {home.reviewCount}
+        </span>
+      </div>
+    </div>
+  ));
   if (next.length > 0 && prev.length === 0) {
     return (
       <div>

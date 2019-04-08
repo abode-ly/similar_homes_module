@@ -3,7 +3,7 @@ import './style.css';
 import Stars from './Stars';
 
 const Homes = (props) => {
-  const {handleNext, data, prev, next } = props;
+  const { handleNext, data, prev, next, handlePrev } = props;
   const listing = data.map((home) => {
     return (
       <div className="home">
@@ -24,33 +24,52 @@ const Homes = (props) => {
   });
 
   if (next.length > 0 && prev.length === 0) {
-    console.log(prev.length)
     return (
       <div>
         <h2 className="title"> More Homes You May Like</h2>
         <div className="homes">
           {listing}
           <div className="nxt-container">
-            <button type="button" className="nextButton" onClick={() => handleNext()}> > </button>
+            <button type="button" className="nextButton" onClick={() => handleNext()}>
+              {'>'}
+            </button>
           </div>
         </div>
       </div>
     );
-  } else if (next.length > 0 && prev.length < 9) {
-      return (
-        <div>
-          <h2 className="title"> More Homes You May Like</h2>
+  } if (next.length > 0 && prev.length < 9) {
+    return (
+      <div>
+        <h2 className="title"> More Homes You May Like</h2>
+        <div className="homes">
           <div className="prev-container">
-            <button type="button" className="prevButton" value="<" />
+            <button type="button" className="prevButton" onClick={() => handlePrev()}>
+              {'<'}
+            </button>
           </div>
-          <div className="homes">
-            {homes}
-          </div>
+          {listing}
           <div className="nxt-container">
-            <button type="button" className="nextButton" onClick={() => handleNext()}> > </button>
+            <button type="button" className="nextButton" onClick={() => handleNext()}>
+              {'>'}
+            </button>
           </div>
         </div>
-     )
+      </div>
+    );
+  } if (prev.length === 9) {
+    return (
+      <div>
+        <h2 className="title"> More Homes You May Like</h2>
+        <div className="homes">
+          <div className="prev-container">
+            <button type="button" className="prevButton" onClick={() => handlePrev()}>
+              {'<'}
+            </button>
+          </div>
+          {listing}
+        </div>
+      </div>
+    );
   }
 };
 

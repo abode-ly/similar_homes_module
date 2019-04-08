@@ -4,8 +4,6 @@
   height: 338px;
   flex-direction: row;
   margin: auto;
-  /* flex-flow: column-wrap;
-  overflow: hidden; */
   cursor: pointer;
 }
 
@@ -91,6 +89,13 @@
   color: rgb(118, 118, 118)
 }
 
+.prev-container {
+  display: flex;
+  align-items: center;
+  width: 24px;
+  height: 338px;
+  font-size: 16px;
+}
 .prevButton {
   display: flex;
   font-size: 20px;

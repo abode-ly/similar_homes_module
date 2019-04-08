@@ -7,12 +7,12 @@ class App extends Component {
     super();
     this.state = {};
     this.handleNext = this.handleNext.bind(this);
+    this.handlePrev = this.handlePrev.bind(this);
   }
 
   componentDidMount() {
     Axios.get('/homes')
-      .then(res => this.setState({ 
-        homes: res.data,
+      .then(res => this.setState({
         currentDisplay: res.data.slice(0, 3),
         next: res.data.slice(3),
         previous: [],
@@ -22,23 +22,32 @@ class App extends Component {
 
   handleNext() {
     const { previous, next, currentDisplay } = this.state;
-    if (previous.length === 9) {
-      console.log( 'conditional render arrow away');
-    } else {
-      const newPrev = [...previous, currentDisplay.shift()];
-      const newCurrent = [...currentDisplay, next.shift()];
-      const newNext = next.slice(0);
-      this.setState({
-        previous: newPrev,
-        currentDisplay: newCurrent,
-        next: newNext,
-      });
-    }
+    const newPrev = [...previous, currentDisplay.shift()];
+    const newCurrent = [...currentDisplay, next.shift()];
+    const newNext = next.slice(0);
+    this.setState({
+      previous: newPrev,
+      currentDisplay: newCurrent,
+      next: newNext,
+    });
+  }
+
+  handlePrev() {
+    const { previous, next, currentDisplay } = this.state;
+    const newPrev = previous.length === 1 ? [] : previous.slice(0, previous.length - 1);
+    let newCurrent = [previous.pop(), ...currentDisplay];
+    newCurrent = newCurrent.slice(0, newCurrent.length - 1);
+    const newNext = [currentDisplay.pop(), ...next];
+    this.setState({
+      previous: newPrev,
+      currentDisplay: newCurrent,
+      next: newNext,
+    });
   }
 
   render() {
     const { currentDisplay, previous, next } = this.state;
-    return currentDisplay ? <Homes data={currentDisplay} handleNext={this.handleNext} prev={previous} next={next} /> : 'no data';
+    return currentDisplay ? <Homes data={currentDisplay} handleNext={this.handleNext} handlePrev={this.handlePrev} prev={previous} next={next} /> : 'no data';
   }
 }
 

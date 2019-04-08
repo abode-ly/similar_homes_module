@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Stars = (rating) => {
-  //using a for loop always iterate 5 times, whenever current i is less than 
-  //current rating, add a filled star, if it is more, add an empty star. 
+  // using a for loop always iterate 5 times, whenever current i is less than
+  // current rating, add a filled star, if it is more, add an empty star.
   return (
     <div className="stars">
       <span>

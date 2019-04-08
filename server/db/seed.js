@@ -104,7 +104,7 @@ const homePhotos = [
 
 const randomRating = () => {
   const rating = [2, 2.5, 3, 3.5, 4, 4.5, 5];
-  return rating[Math.floor(Math.random() * 6)];
+  return rating[Math.ceil(Math.random() * 6)];
 };
 
 const randomType = () => {

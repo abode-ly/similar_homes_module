@@ -1,10 +1,9 @@
 import React from 'react';
 import enzyme, { shallow } from 'enzyme';
-import App from '../client/src/App';
+import Home from '../client/src/Homes';
 
-
-describe('App', () => {
+describe('Home', () => {
   it('renders without crashing', () => {
-    shallow(<App />)
+    mount(<Home />)
   });
 });

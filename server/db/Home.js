@@ -13,7 +13,7 @@ const Home = db.define('Home', {
   locationName: Sequelize.STRING,
   photoUrl: Sequelize.STRING,
   price: Sequelize.INTEGER,
-  rating: Sequelize.INTEGER,
+  rating: Sequelize.STRING,
   reviewCount: Sequelize.INTEGER,
 });
 

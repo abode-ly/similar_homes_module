@@ -1,5 +1,5 @@
 node_modules
-client/dist/nearbyHomesapp.js
+client/dist/nearbyHomes.app.js
 config/db-config.js
 coverage
 .vscode

@@ -52,6 +52,7 @@ const Homes = ({ handleNext, data, prev, next, handlePrev }) => {
         </div>
       </div>
     );
+
   } if (prev.length === 9) {
     return (
       <div>

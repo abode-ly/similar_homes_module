@@ -13,5 +13,5 @@ jobs:
       - checkout
       - run: npm install 
       - run: npm run build
-      - run: npm run db:setup 
+      - run: npm run seed 
       - run: npm test

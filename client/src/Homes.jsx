@@ -12,7 +12,7 @@ const Homes = ({ handleNext, data, prev, next, handlePrev }) => {
         ${home.price} per night
       </div>
       <div className="stars">
-        <Stars rating={home.rating} />
+        <Stars rating={parseFloat(home.rating)} />
         <span className="totalReviews">
           {home.reviewCount}
         </span>

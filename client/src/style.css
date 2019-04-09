@@ -83,6 +83,22 @@
   color: rgb(118, 118, 118)
 }
 
+.prev-container {
+  display: flex;
+  align-items: center;
+  width: 24px;
+  height: 338px;
+  font-size: 16px;
+}
+.prevButton {
+  display: flex;
+  font-size: 20px;
+  background-color: white;
+  margin-bottom: 80px;
+  border-style: none;
+  color: rgb(118, 118, 118)
+}
+
 
 
 

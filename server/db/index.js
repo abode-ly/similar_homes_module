@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const key = process.env.MYSQL_ROOT_PW || require('../../config');
+const key = process.env.MYSQL_ROOT_PW || require('../../config/db-config');
 
 const dbName = process.env.MYSQL_DATABASE || 'FEC';
 

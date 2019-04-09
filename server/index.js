@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const Sequelize = require('sequelize');
 const db = require('./db/index.js');
 const Home = require('./db/Home.js');
 
@@ -14,7 +15,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/homes', (req, res) => {
-  Home.findAll({ limit: 12 })
+  Home.findAll({ order: Sequelize.literal('rand()'), limit: 12 })
     .then(data => res.send(data))
     .catch(err => res.status(404).end(err));
 });

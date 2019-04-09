@@ -1,6 +1,6 @@
 node_modules
 client/dist/app.js
-config.js
+config/db-config.js
 .vscode
 .DS_Store
 

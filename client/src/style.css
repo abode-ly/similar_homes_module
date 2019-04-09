@@ -2,7 +2,6 @@
   display: flex;
   width: 1032px;
   height: 338px;
-  flex-direction: row;
   margin: auto;
   cursor: pointer;
 }
@@ -67,7 +66,7 @@
   margin: auto;
 }
 
-.nxt-container {
+.nxtContainer {
   display: flex;
   align-self: flex-end;
   width: 24px;
@@ -85,7 +84,7 @@
   color: rgb(118, 118, 118)
 }
 
-.prev-container {
+.prevContainer {
   display: flex;
   align-items: center;
   width: 24px;
@@ -100,6 +99,8 @@
   border-style: none;
   color: rgb(118, 118, 118)
 }
+
+
 
 
 

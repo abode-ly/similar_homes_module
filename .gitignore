@@ -1,6 +1,7 @@
 node_modules
-client/dist/app.js
+client/dist/nearbyHomesapp.js
 config/db-config.js
+coverage
 .vscode
 .DS_Store
 

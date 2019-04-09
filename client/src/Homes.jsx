@@ -1,19 +1,17 @@
 import React from 'react';
-import './style.css';
+import styles from './style.css';
 import Stars from './Stars';
 
 const Homes = ({ handleNext, data, prev, next, handlePrev }) => {
   const listing = data.map(home => (
-    <div className="home">
-      <img className="homePhoto" src={home.photoUrl} alt="" />
-      <div className="allocText">{home.propertyAvail}</div>
-      <div className="descText">{home.locationName}</div>
-      <div className="priceText">
-        ${home.price} per night
-      </div>
-      <div className="stars">
+    <div className={styles.home} key={home.id}>
+      <img className={styles.homePhoto} src={home.photoUrl} alt="" />
+      <div className={styles.allocText}>{home.propertyAvail}</div>
+      <div className={styles.descText}>{home.locationName}</div>
+      <div className={styles.priceText}>${home.price} per night</div>
+      <div className={styles.stars}>
         <Stars rating={parseFloat(home.rating)} />
-        <span className="totalReviews">
+        <span className={styles.totalReviews}>
           {home.reviewCount}
         </span>
       </div>
@@ -22,11 +20,11 @@ const Homes = ({ handleNext, data, prev, next, handlePrev }) => {
   if (next.length > 0 && prev.length === 0) {
     return (
       <div>
-        <h2 className="title"> More Homes You May Like</h2>
-        <div className="homes">
+        <h2 className={styles.title}> More Homes You May Like</h2>
+        <div className={styles.homes}>
           {listing}
-          <div className="nxt-container">
-            <button type="button" className="nextButton" onClick={() => handleNext()}>
+          <div className={styles.nxtContainer}>
+            <button type="button" className={styles.nextButton} onClick={() => handleNext()}>
               {'>'}
             </button>
           </div>
@@ -36,16 +34,16 @@ const Homes = ({ handleNext, data, prev, next, handlePrev }) => {
   } if (next.length > 0 && prev.length < 9) {
     return (
       <div>
-        <h2 className="title"> More Homes You May Like</h2>
-        <div className="homes">
-          <div className="prev-container">
-            <button type="button" className="prevButton" onClick={() => handlePrev()}>
+        <h2 className={styles.title}> More Homes You May Like</h2>
+        <div className={styles.homes}>
+          <div className={styles.prevContainer}>
+            <button type="button" className={styles.prevButton} onClick={() => handlePrev()}>
               {'<'}
             </button>
           </div>
           {listing}
-          <div className="nxt-container">
-            <button type="button" className="nextButton" onClick={() => handleNext()}>
+          <div className={styles.nxtContainer}>
+            <button type="button" className={styles.nextButton} onClick={() => handleNext()}>
               {'>'}
             </button>
           </div>
@@ -55,10 +53,10 @@ const Homes = ({ handleNext, data, prev, next, handlePrev }) => {
   } if (prev.length === 9) {
     return (
       <div>
-        <h2 className="title"> More Homes You May Like</h2>
-        <div className="homes">
-          <div className="prev-container">
-            <button type="button" className="prevButton" onClick={() => handlePrev()}>
+        <h2 className={styles.title}> More Homes You May Like</h2>
+        <div className={styles.homes}>
+          <div className={styles.prevContainer}>
+            <button type="button" className={styles.prevButton} onClick={() => handlePrev()}>
               {'<'}
             </button>
           </div>

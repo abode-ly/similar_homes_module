@@ -114,7 +114,7 @@ const randomType = () => {
 
 const randomDescriptor = () => {
   const homeDescriptor = ['Studio', 'Loft', 'Apartment', 'House', 'Home', 'Condo', 'Cabin', 'Sweet', 'Duplex', 'Town-Home', 'Villa', 'Vacation-House', 'Yurt', 'Bungaloo', 'Chalet', 'Penthouse', 'Terrace', 'Cottage'];
-  let buzzWord = faker.company.bsAdjective().split('')
+  let buzzWord = faker.company.bsAdjective().split('');
   buzzWord[0] = buzzWord[0].toUpperCase();
   buzzWord = buzzWord.join('');
   return `${buzzWord} ${homeDescriptor[Math.floor(Math.random() * 17)]} in ${faker.address.city()}`;

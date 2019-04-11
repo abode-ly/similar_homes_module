@@ -8,13 +8,10 @@ const app = express();
 const port = process.env.PORT || 3004;
 
 
-app.use(express.static(path.join(__dirname, '../client/dist')));
+app.use('/similarhomes/:host_id', express.static(path.join(__dirname, '../client/dist')));
 
-app.get('/', (req, res) => {
-  res.send();
-});
 
-app.get('/homes', (req, res) => {
+app.get('/similarhomes/:host_id/nearby', (req, res) => {
   Home.findAll({ order: Sequelize.literal('rand()'), limit: 12 })
     .then(data => res.send(data))
     .catch(err => res.status(404).end(err));

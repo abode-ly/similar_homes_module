@@ -11,7 +11,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    Axios.get('/homes')
+    const hostId = window.location.pathname.split('/')[2] || Math.floor(Math.random() * 100);
+    Axios.get(`/similarhomes/${hostId}/nearby`)
       .then(res => this.setState({
         currentDisplay: res.data.slice(0, 3),
         next: res.data.slice(3),

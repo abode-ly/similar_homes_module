@@ -7,7 +7,7 @@ const Home = require('./db/Home.js');
 const app = express();
 const port = process.env.PORT || 3004;
 
-
+app.use(express.static(path.join(__dirname, '../client/dist')));
 app.use('/similarhomes/:host_id', express.static(path.join(__dirname, '../client/dist')));
 
 

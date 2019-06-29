@@ -9,8 +9,9 @@
     "node": "8.15.1"
   },
   "scripts": {
-    "start": "nodemon ./server/index.js",
-    "build": "webpack",
+    "start": "node ./server/index.js",
+    "start:watch": "nodemon ./server/index.js",
+    "build": "webpack -p",
     "build:watch": "webpack --watch",
     "test": "jest",
     "test:watch": "jest --watch --colors",

@@ -27,7 +27,7 @@ Then navgate to
 
 
 
-![](https://share.getcloudapp.com/bLu6L5GY)
+![](https://p26.f0.n0.cdn.getcloudapp.com/items/bLu6L5GY/Screen%20Recording%202019-06-30%20at%2010.41%20PM.gif)
 ## Usage
   Allows user to browse through 12 near by homes on a photo carousel. 
 

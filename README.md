@@ -13,10 +13,10 @@ In your desired directory
 ## Installation 
 
 ### Without Docker
-```npm install```
-```npm run seed```
-```npm run build```
-```npm start```
+```npm install```  
+```npm run seed```  
+```npm run build```  
+```npm start```  
 
 Then navgate to 
 

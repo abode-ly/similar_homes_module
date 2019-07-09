@@ -1,38 +1,34 @@
 # Similar Homes Photo Carousel 
 
-Display 12 nearby homes a on a photo carousel, with general location, short description of locale, price and rating. 
+Abode.ly's Similar Homes Carousel microservice is the frontend component that allows a user to view 12
+near by home listings that each contain a small thumbnail, location information, property description,
+price per night, and a 1 to 5 star rating based on an aggreagated user reviews.
 
-## Related Projects
+## Getting Started
 
-  - https://github.com/abode-ly/carousel_module
-  - https://github.com/abode-ly/checkout_module
-  - https://github.com/abode-ly/reviews_module
-  - https://github.com/abode-ly/host_info
+In your desired directory
 
-## Table of Contents
+```git clone https://github.com/abode-lysimilar_homes_module```
 
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
+## Installation 
 
+### Without Docker
+```npm install``
+```npm run seed```
+```npm run build```
+```npm start```
+
+Then navgate to 
+
+```localhost:3004/similarhomes/1```
+
+### With Docker
+
+
+
+
+![](https://share.getcloudapp.com/bLu6L5GY)
 ## Usage
   Allows user to browse through 12 near by homes on a photo carousel. 
 
-## Requirements
-
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
-- etc
-
-## Development
-
-### Installing Dependencies
-
-From within the root directory:
-
-```sh
-npm install -g webpack
-npm install
-```
 

@@ -13,7 +13,7 @@ In your desired directory
 ## Installation 
 
 ### Without Docker
-```npm install``
+```npm install```
 ```npm run seed```
 ```npm run build```
 ```npm start```
